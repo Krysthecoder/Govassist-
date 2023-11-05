@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>US Visa Guide</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header_nav">
+            <img src="assets/Govassist-Logo.png" class="header_nav--icon">
+        </a>
+    </header>
+    <div class="classification">
+        <h1 class="actions__title">Actions Classification.</h1>
+        <ul class="actions__class">
+            <li class="class-item">Internal notes <span class="highlight__internal">Yellow</span>.</li>
+            <li class="class-item">Zendesk field <span class="highlight__zendesk">Blue</span>.</li>
+            <li class="class-item">UCC Status <span class="highlight__ucc">Green</span>.</li>
+            <li class="class-item">Other Actions <span class="highlight__other-actions">Black</span>.</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="stage__container">
+        <Label class="stage__selection">Choose ticket stage <i class="fa-solid fa-arrow-down"></i></Label>
+        <div class="stage__values-container">
+            <select name="selection__options" id="stages">
+                <option value="none" class="options__value"></option>
+                <option value="stage1" class="options__value">Initial action.</option>
+                <option value="stage2" class="options__value">If <span class="options__value-bold">more information</span> is required.</option>
+                <option value="stage3" class="options__value"><span class="options__value-bold">MRV is paid</span>, but appointment is not scheduled.</option>
+                <option value="stage4" class="options__value">After the appointments are <span class="options__value-bold">scheduled</span>.</option>
+                <option value="stage5" class="options__value">If the appointment date is <span class="options__value-bold">Changed or Rescheduled</span>.</option>
+                <option value="stage6" class="options__value">If all appointments are <span class="options__value-bold">waived</span> .</option>
+                <option value="stage7" class="options__value">Appointment <span class="options__value-bold">Reminder</span>.</option>
+                <option value="stage8" class="options__value">After CX attends the appointment or send the documents.</option>
+                <option value="stage9" class="options__value">If the client requests a <span class="options__value-bold">Refund</span>.</option>
+                <option value="stage10" class="options__value">Reminders and pro tips.</option>
+            </select>
+        </div>
+    </div>
+    <hr>
+    <div class="taskcontainers">
+        <div id="stage1">
+            <h2 class="stage__title">Initial Actions.</h2>
+            <ol class="stage__steps">
+                <li class="steps__guide"><span class="highlight__zendesk">Open the ticket and take ownership in ZD field.</span></li>
+                <li class="steps__guide">Check if there are any <span class="bold">related tickets</span>.</li>
+                <li class="steps__guide"><span class="links">Review</span> the application in UCC.</li>
+                <li class="steps__guide">Check if the client previously contacted us or sent us a message and respons to it.</li>
+                <li class="steps__guide">Chec if the clients speaks another language and include <span class="bold">translations</span> in the <span class="bold">messages and internal note.</span></li>
+                <li class="steps__guide highlight__red">Send the <span class="bold">Initial Response</span> macro or the <span class="bold">More information needed</span> macro and include your <span class="bold">Calendly link</span>.</li>
+                <br>
+                <br>
+                <br>
+                <li class="steps__guide"><span class="bold mini-title">IF ALL INFORMATION WAS PROVIDED RIGHT THEN CONTINUE WITH THE BELOW STEPS.</span></li>
+                <li class="steps__guide"><span class="bold">Process</span> the Ds-160 form Run the bot or fill out manually <span class="italic highlight__ucc">dont forget to select processed manyally in UCC if you did it manually.</span></li>
+                <li class="steps__guide">Create an <span class="bold">Embassy Account</span> for the client.</li>
+                <li class="steps__guide"><span class="highlight__internal">Add an internal not with the <span class="bold"> the screenshot of the account's first page, applicant details and questions page <span class="italic">if available</span></span>a long with the <span class="bold">Account Credentials</span>.</span></li>
+                <li class="steps__guide"><span class="highlight__zendesk">Add embasst account <span class="bold">credentials</span> in ZD fields</span>.</li>
+                <li class="steps__guide"></li>
+                <li class="steps__guide"></li>
+                <li class="steps__guide"></li>
+                <li class="steps__guide"></li>
+            </ol>
+        </div>
+        <div id="stage2">
+            <h2>stage 2.</h2>
+            <p>lore epsum</p>
+        </div>
+        <div id="stage3">
+            <h2>stage 3.</h2>
+            <p>lore epsum</p>
+        </div>
+        <div id="stage4">
+            <h2>stage 3.</h2>
+            <p>lore epsum</p>
+        </div>
+        <div id="stage5">
+            <h2>stage 3.</h2>
+            <p>lore epsum</p>
+        </div>
+        <div id="stage6">
+            <h2>stage 3.</h2>
+            <p>lore epsum</p>
+        </div>
+        <div id="stage7">
+            <h2>stage 3.</h2>
+            <p>lore epsum</p>
+        </div>
+        <div id="stage8">
+            <h2>stage 3.</h2>
+            <p>lore epsum</p>
+        </div>
+        <div id="stage9">
+            <h2>stage 3.</h2>
+            <p>lore epsum</p>
+        </div>
+        <div id="stage10">
+            <h2>stage 3.</h2>
+            <p>lore epsum</p>
+        </div>
+    </div>
+    
+    <hr>
+    <footer class="panel__footer">
+        <div class="footer__container">
+            <p>From the agents to the agents.</p>
+            <p>Made by Krysthopher Ruiz and Vicente Ortiz.</p>
+        </div>
+    </footer>
+</body>
+<script src="https://kit.fontawesome.com/7b438b8ba0.js" crossorigin="anonymous"></script>
+<script src="./scripts/script.js"></script>
+</html>
