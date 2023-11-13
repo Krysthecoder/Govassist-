@@ -27,7 +27,7 @@
         <Label class="stage__selection">Choose ticket stage <i class="fa-solid fa-arrow-down"></i></Label>
         <div class="stage__values-container">
             <select name="selection__options" id="stages">
-                <option value="none" class="options__value"></option>
+                <option value="none" class="options__value">Select here!!!</option>
                 <option value="stage1" class="options__value">Initial action.</option>
                 <option value="stage2" class="options__value">If <span class="options__value-bold">more information</span> is required.</option>
                 <option value="stage3" class="options__value"><span class="options__value-bold">MRV is paid</span>, but appointment is not scheduled.</option>
@@ -45,26 +45,100 @@
     <div class="taskcontainers">
         <div id="stage1">
             <h2 class="stage__title">Initial Actions.</h2>
-            <ol class="stage__steps">
-                <li class="steps__guide"><span class="highlight__zendesk">Open the ticket and take ownership in ZD field.</span></li>
-                <li class="steps__guide">Check if there are any <span class="bold">related tickets</span>.</li>
-                <li class="steps__guide"><span class="links">Review</span> the application in UCC.</li>
-                <li class="steps__guide">Check if the client previously contacted us or sent us a message and respons to it.</li>
-                <li class="steps__guide">Chec if the clients speaks another language and include <span class="bold">translations</span> in the <span class="bold">messages and internal note.</span></li>
-                <li class="steps__guide highlight__red">Send the <span class="bold">Initial Response</span> macro or the <span class="bold">More information needed</span> macro and include your <span class="bold">Calendly link</span>.</li>
-                <br>
-                <br>
-                <br>
-                <li class="steps__guide"><span class="bold mini-title">IF ALL INFORMATION WAS PROVIDED RIGHT THEN CONTINUE WITH THE BELOW STEPS.</span></li>
-                <li class="steps__guide"><span class="bold">Process</span> the Ds-160 form Run the bot or fill out manually <span class="italic highlight__ucc">dont forget to select processed manyally in UCC if you did it manually.</span></li>
-                <li class="steps__guide">Create an <span class="bold">Embassy Account</span> for the client.</li>
-                <li class="steps__guide"><span class="highlight__internal">Add an internal not with the <span class="bold"> the screenshot of the account's first page, applicant details and questions page <span class="italic">if available</span></span>a long with the <span class="bold">Account Credentials</span>.</span></li>
-                <li class="steps__guide"><span class="highlight__zendesk">Add embasst account <span class="bold">credentials</span> in ZD fields</span>.</li>
-                <li class="steps__guide"></li>
-                <li class="steps__guide"></li>
-                <li class="steps__guide"></li>
-                <li class="steps__guide"></li>
-            </ol>
+
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step1">
+                        <label for="step1" value="step1" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Open the ticket and take ownership in ZD field.</span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step2" class="stage__steps">
+                        <label for="step2" value="step2" class="steps__guide"> 
+                            Check if there are any <span class="bold">related tickets</span>.</li>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step3" class="stage__steps">
+                        <label for="step3" value="step3" class="steps__guide"> 
+                            <span class="links"><a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23237987126/Detailed+UCC+Review">Review</a></span> the application in UCC.</li>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4" class="stage__steps">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            Check if the clients speaks another language and include <span class="bold">translations</span> in the <span class="bold">messages and internal note.</span></li>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step5" class="stage__steps">
+                        <label for="step5" value="step5" class="steps__guide"> 
+                            <span class="red">Send the <span class="bold">Initial Response</span> macro.</span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step6" class="stage__steps">
+                        <label for="step6" value="step6" class="steps__guide"> 
+                            <span class="red">Include your <span class="bold">Calendly</span> link.</span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step7" class="stage__steps">
+                        <label for="step7" value="step7" class="steps__guide"> 
+                            <span class="bold">Process</span>the Ds-160 form *Run the bot or fill it out manually if needed 
+                            <br>
+                            (select 'Processed manually' UCC status if so). 
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step8" class="stage__steps">
+                        <label for="step8" value="step8" class="steps__guide"> 
+                            Create an <span class="bold">Embassy Account</span> for the client.
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step9" class="stage__steps">
+                        <label for="step9" value="step9" class="steps__guide"> 
+                            <span class="highlight__internal">Add an internal note with <span class="bold">the screenshot of the account's</span> first page <span class="bold">and</span> applicant details & questions page along with the <span class="bold">account credentials </span> and</span> <span class="highlight__ucc">the UCC status to <span class="bold">"Embassy Account Created".</span></span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step10" class="stage__steps">
+                        <label for="step10" value="step10" class="steps__guide"> 
+                            <span class="highlight__zendesk">Add embassy account <span class="bold">credentials</span> in ZD fields (left side).</span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step11" class="stage__steps">
+                        <label for="step11" value="step11" class="steps__guide"> 
+                            <span class="highlight__ucc">Mack the UCC application as <span class="bold">"Embassy Account Created"</span>.</span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step12" class="stage__steps">
+                        <label for="step12" value="step12" class="steps__guide"> 
+                            <span class="red">Dend the correct <span class="bold">
+                                <a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23237988036/USA+VISA+-+Ready+for+...+Situations">
+                                "ready for ..."
+                                </a>
+                            </span>macro, and set to pending.</span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step13" class="stage__steps">
+                        <label for="step13" value="step13" class="steps__guide"> 
+                            <span class="red">Send the necessary <span class="bold">documents/files</span> via document handler.</span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step13" class="stage__steps">
+                        <label for="step13" value="step13" class="steps__guide"> 
+                            <span class="highlight__zendesk">Mark ZD pending offset reason as "Waiting for Client - Pending".</span>
+                        </label>
+                    </div>
+                </div>
         </div>
         <div id="stage2">
             <h2>stage 2.</h2>
@@ -105,6 +179,9 @@
     </div>
     
     <hr>
+    <button>
+        reset
+    </button>
     <footer class="panel__footer">
         <div class="footer__container">
             <p>From the agents to the agents.</p>

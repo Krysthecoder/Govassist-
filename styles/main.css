@@ -50,9 +50,15 @@ header{
     background-color: aqua;
 }
 .highlight__ucc{
-    background-color: aquamarine;
+    background-color: rgb(32, 230, 164);
 }
 .highlight__other-actions{
+    font-weight: bold;
+}
+.red{
+    color: red;
+}
+.link{
     font-weight: bold;
 }
 
@@ -139,9 +145,10 @@ select:hover{
 
 /*  Stages */
 
-#stage1, #stage2, #stage3, #stage4, #stage5, #stage6, #stage7, #stage8, #stage9, #stage10{
-    display: none;
+#stage1, #stage, #stage3, #stage4, #stage5, #stage6, #stage7, #stage8, #stage9, #stage10{
+    /*display: none;   recover this */
     margin-top: 2rem;
+    display: none;
 }
 .bold{
     font-weight: 600;
@@ -152,17 +159,18 @@ select:hover{
 .stage__title{
     font-size: 1.5rem;
     font-weight: 600;
+    margin-bottom: 1.3rem;
 }
+
 .stage__steps{
-    margin-top: 1.3rem;
-    height: auto;
-    justify-content: start;
+    text-align: justify;
+    padding-left: 1rem;
 }
-.steps__guide{
+
+.stage__subcontainer{
     margin-top: .7rem;
-    text-align: left;
-    margin-left: 1rem;
 }
+
 
 /* Footer */
 
