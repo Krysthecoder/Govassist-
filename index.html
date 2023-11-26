@@ -19,25 +19,24 @@
             <li class="class-item">Internal notes <span class="highlight__internal">Yellow</span>.</li>
             <li class="class-item">Zendesk field <span class="highlight__zendesk">Blue</span>.</li>
             <li class="class-item">UCC Status <span class="highlight__ucc">Green</span>.</li>
-            <li class="class-item">Other Actions <span class="highlight__other-actions">Black</span>.</li>
+            <li class="class-item">Other Actions <span class="highlight__other-actions">Black</span></li>
         </ul>
     </div>
     <hr>
     <div class="stage__container">
-        <Label class="stage__selection">Choose ticket stage <i class="fa-solid fa-arrow-down"></i></Label>
         <div class="stage__values-container">
             <select name="selection__options" id="stages">
-                <option value="none" class="options__value">Select here!!!</option>
+                <option value="0" class="options__value">Choose ticket stage</option>
                 <option value="stage1" class="options__value">Initial action.</option>
-                <option value="stage2" class="options__value">If <span class="options__value-bold">more information</span> is required.</option>
-                <option value="stage3" class="options__value"><span class="options__value-bold">MRV is paid</span>, but appointment is not scheduled.</option>
-                <option value="stage4" class="options__value">After the appointments are <span class="options__value-bold">scheduled</span>.</option>
-                <option value="stage5" class="options__value">If the appointment date is <span class="options__value-bold">Changed or Rescheduled</span>.</option>
-                <option value="stage6" class="options__value">If all appointments are <span class="options__value-bold">waived</span> .</option>
-                <option value="stage7" class="options__value">Appointment <span class="options__value-bold">Reminder</span>.</option>
-                <option value="stage8" class="options__value">After CX attends the appointment or send the documents.</option>
-                <option value="stage9" class="options__value">If the client requests a <span class="options__value-bold">Refund</span>.</option>
-                <option value="stage10" class="options__value">Reminders and pro tips.</option>
+                <option value="stage2" class="options__value">If more information is required.</option>
+                <option value="stage3" class="options__value">Embassy Account Creation.</option>
+                <option value="stage4" class="options__value">If the MRV is paid but no appointment scheduled.</option>
+                <option value="stage5" class="options__value">After the appointment is Scheduled</option>
+                <option value="stage6" class="options__value">If the appointment date has changed.</option>
+                <option value="stage7" class="options__value">If all appointments are waived.</option>
+                <option value="stage8" class="options__value">Appointment Reminder.</option>
+                <option value="stage9" class="options__value">After they attend the appointment/send the documents.</option>
+                <option value="stage10" class="options__value">Passport Delivery.</option>
             </select>
         </div>
     </div>
@@ -45,7 +44,6 @@
     <div class="taskcontainers">
         <div id="stage1">
             <h2 class="stage__title">Initial Actions.</h2>
-
                 <div class="stage__steps">
                     <div class="stage__subcontainer">
                         <input type="checkbox" name="steps__guide" id="step1">
@@ -87,100 +85,732 @@
                     <div class="stage__subcontainer">
                         <input type="checkbox" name="steps__guide" id="step7" class="stage__steps">
                         <label for="step7" value="step7" class="steps__guide"> 
-                            <span class="bold">Process</span>the Ds-160 form *Run the bot or fill it out manually if needed 
+                            <span class="bold">Process</span> the Ds-160 form *Run the bot or fill it out manually if needed 
                             <br>
                             (select 'Processed manually' UCC status if so). 
                         </label>
                     </div>
                     <div class="stage__subcontainer">
-                        <input type="checkbox" name="steps__guide" id="step8" class="stage__steps">
-                        <label for="step8" value="step8" class="steps__guide"> 
-                            Create an <span class="bold">Embassy Account</span> for the client.
-                        </label>
-                    </div>
-                    <div class="stage__subcontainer">
-                        <input type="checkbox" name="steps__guide" id="step9" class="stage__steps">
-                        <label for="step9" value="step9" class="steps__guide"> 
-                            <span class="highlight__internal">Add an internal note with <span class="bold">the screenshot of the account's</span> first page <span class="bold">and</span> applicant details & questions page along with the <span class="bold">account credentials </span> and</span> <span class="highlight__ucc">the UCC status to <span class="bold">"Embassy Account Created".</span></span>
-                        </label>
-                    </div>
-                    <div class="stage__subcontainer">
-                        <input type="checkbox" name="steps__guide" id="step10" class="stage__steps">
-                        <label for="step10" value="step10" class="steps__guide"> 
-                            <span class="highlight__zendesk">Add embassy account <span class="bold">credentials</span> in ZD fields (left side).</span>
-                        </label>
-                    </div>
-                    <div class="stage__subcontainer">
-                        <input type="checkbox" name="steps__guide" id="step11" class="stage__steps">
-                        <label for="step11" value="step11" class="steps__guide"> 
-                            <span class="highlight__ucc">Mack the UCC application as <span class="bold">"Embassy Account Created"</span>.</span>
-                        </label>
-                    </div>
-                    <div class="stage__subcontainer">
-                        <input type="checkbox" name="steps__guide" id="step12" class="stage__steps">
-                        <label for="step12" value="step12" class="steps__guide"> 
-                            <span class="red">Dend the correct <span class="bold">
-                                <a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23237988036/USA+VISA+-+Ready+for+...+Situations">
-                                "ready for ..."
-                                </a>
-                            </span>macro, and set to pending.</span>
-                        </label>
-                    </div>
-                    <div class="stage__subcontainer">
-                        <input type="checkbox" name="steps__guide" id="step13" class="stage__steps">
-                        <label for="step13" value="step13" class="steps__guide"> 
-                            <span class="red">Send the necessary <span class="bold">documents/files</span> via document handler.</span>
-                        </label>
-                    </div>
-                    <div class="stage__subcontainer">
-                        <input type="checkbox" name="steps__guide" id="step13" class="stage__steps">
-                        <label for="step13" value="step13" class="steps__guide"> 
-                            <span class="highlight__zendesk">Mark ZD pending offset reason as "Waiting for Client - Pending".</span>
+                        <input type="checkbox" name="steps__guide" id="step7" class="stage__steps">
+                        <label for="step7" value="step7" class="steps__guide"> 
+                            <span class="bold">Proceed with the Embassy Account creation guide.
                         </label>
                     </div>
                 </div>
         </div>
         <div id="stage2">
-            <h2>stage 2.</h2>
-            <p>lore epsum</p>
+            <h2>If more informaiton is required.</h2>
+            <br>
+            <div class="stage__steps">
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step2">
+                    <label for="step2" value="step1" class="steps__guide"> 
+                        <span class="highlight__ucc">
+                            Mark the UCC as <span class="bold">"More information Required"</span>.
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step2">
+                    <label for="step2" value="step1" class="steps__guide"> 
+                        <span class="highlight__internal">
+                            Include the screenshots/notes of what information is required or what needs to be corrected or double-checked <span class="bold">"Include the Customer name".</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step2">
+                    <label for="step2" value="step1" class="steps__guide"> 
+                        <span class="red">
+                            Send the "More information Required" Macro and make sure to <Span class="bold">include your Calendly Link.</Span>
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step2">
+                    <label for="step2" value="step1" class="steps__guide"> 
+                        <span class="highlight__zendesk">
+                            Mark ZD oending offset reson as "Waiting for client - Pending".
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step2">
+                    <label for="step2" value="step1" class="steps__guide"> 
+                        <span class="highlight__internal">
+                            Post the screenshot of the cuttent time for the client (if you can't calll them within your shift, add the screenshot showing that, you can use the <a href="https://www.worldtimebuddy.com/" class="link" target="_blank">Time Buddy</a> or <a href="https://savvytime.com/converter" target="_blank" class="link">Time Converter(extention to chrome available)</a>, and you can trade the ticket). 
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step2">
+                    <label for="step2" value="step1" class="steps__guide"> 
+                        <span class="red">
+                            Call the Client. Please follow the <a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23500817879/Calling+Customers+Rules"  class="link">Customer call rules</a> and <a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23434919937/Customer+Verification" class="link">verification guide.</a>.
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step2">
+                    <label for="step2" value="step1" class="steps__guide"> 
+                        <span class="highlight__internal">
+                            Include the "call summary".
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step2">
+                    <label for="step2" value="step1" class="steps__guide"> 
+                        <span>
+                            <span class="highlight__ucc">Include the needed information in UCC and run the bot.</span> then proceed to Embassy account creation guide.
+                        </span>
+                    </label>
+                </div>
+            </div>
         </div>
         <div id="stage3">
-            <h2>stage 3.</h2>
-            <p>lore epsum</p>
+            <h2>Embassy Account Creation</h2>
+            <br>
+            <div class="stage__steps">
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step3" class="stage__steps">
+                    <label for="step3" value="step8" class="steps__guide"> 
+                        Create an <span class="bold">Embassy Account</span> for the client.
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step9" class="stage__steps">
+                    <label for="step9" value="step9" class="steps__guide"> 
+                        <span class="highlight__internal">Add an internal note with <span class="bold">the screenshot of the account's</span> first page <span class="bold">and</span> applicant details & questions page along with the <span class="bold">account credentials </span> and</span> <span class="highlight__ucc">the UCC status to <span class="bold">"Embassy Account Created".</span></span>
+                        <br><br>
+                        <span class="bold">You can copy the below simple macro for your internal note:</span>
+                        <br>
+                        <br>
+                        <span>Embassy Account Created 
+                            <br>Ds160 form :
+                            <br>
+                            <br>Website: 
+                            <br>Email: 
+                            <br>Password:
+                            <br>
+                            <br>    
+                    </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step10" class="stage__steps">
+                    <label for="step10" value="step10" class="steps__guide"> 
+                        <span class="highlight__zendesk">Add embassy account <span class="bold">credentials</span> in ZD fields (left side).</span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step11" class="stage__steps">
+                    <label for="step11" value="step11" class="steps__guide"> 
+                        <span class="highlight__ucc">Mack the UCC application as <span class="bold">"Embassy Account Created"</span>.</span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step12" class="stage__steps">
+                    <label for="step12" value="step12" class="steps__guide"> 
+                        <span class="red">Send the correct <span class="bold">
+                            <a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23237988036/USA+VISA+-+Ready+for+...+Situations">
+                            "ready for ..."
+                            </a>
+                        </span>macro, and set to pending.</span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step13" class="stage__steps">
+                    <label for="step13" value="step13" class="steps__guide"> 
+                        <span class="red">Send the necessary <span class="bold">documents/files</span> via document handler.</span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step13" class="stage__steps">
+                    <label for="step13" value="step13" class="steps__guide"> 
+                        <span class="highlight__zendesk">Mark ZD pending offset reason as "Waiting for Client - Pending".</span>
+                    </label>
+                </div>
+            </div>
         </div>
         <div id="stage4">
-            <h2>stage 3.</h2>
-            <p>lore epsum</p>
+            <h2 class="stage__title">If the MRV is paid but appointment is not scheduled.</h2>
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Include the screenshot fom the Embassy account showing that the MRV is paid and available appointments dates.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                Send a message to the client of call the client to <span class="bold">remind</span> them, telling them that their payment is registered in the system and that they can reschedule it.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                If needed, remind them that appointments are always changing and that it's best to schedule as soon as possible. Also mention that it's possible to reschedule appointments after they are scheduled. Mention the rescheduling limit as well just as heads-up.
+                            </span>
+                        </label>
+                    </div>
+                    <br><br><br>
+                    <p>If MRV is paid but receipt is <span class="bold">not registered</span> refer to <a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23237988854/Contacting+the+Embassy" target="_blank" class="link">this guide</a> and to the links in the appointment shceduling embassy website ('Contact us' part, and scroll to payment issues section).</p>
+                </div>
         </div>
         <div id="stage5">
-            <h2>stage 3.</h2>
-            <p>lore epsum</p>
+            <h2 class="stage__title">After the appointment is <a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23237988290/Interview+Scheduled" target="_blank" class="link">Scheduled</a>.</h2>
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step5">
+                        <label for="step5" value="step4" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Post screenshot from the embassy account showing the <span class="bold">scheduled date</span>also include the screenshot of <span class="bold">travel date</span> (in case it is old, please update) and <span class="bold">passport expiration date.</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step5">
+                        <label for="step5" value="step4" class="steps__guide"> 
+                            <span class="highlight__ucc">
+                                Mark de UCC application as <span class="bold">"interview scheduled"</span> or <span class="bold">"biometric appointment scheduled"</span> or <span class="bold">"drop-off appointment scheduled".</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step5">
+                        <label for="step5" value="step4" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Add the <span class="bold">appointment date</span> in the correct ZD field.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step5">
+                        <label for="step5" value="step4" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Make sure the <span class="bold">travel date</span> in ZD is the same as it is in UCC and that the date is in the Future.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step5">
+                        <label for="step5" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                Send the 'interview Scheduled/drop-off appointment scheduled/Biometric Appointment Scheduled' macro.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step5">
+                        <label for="step5" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                Send the documents from the UCC document handler (Appointment confirmation, MRV receipt, Ds160 form and Ds160 confirmation form) if it is student visa please include the Sevis fee form. 
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step5">
+                        <label for="step5" value="step4" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Mark ZD pending offset reason as "interview scheduled" or "interview WAiver/Biometric on-hold".
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step5">
+                        <label for="step5" value="step4" class="steps__guide"> 
+                            <span>
+                                If the client needs an earlier appointment but no urgent need to travel, <span class="highlight__zendesk">mark ZD "requires earlier appointment" </span>and keep checking and <span class="highlight__internal">posting appointment screenshots.</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
         </div>
         <div id="stage6">
-            <h2>stage 3.</h2>
-            <p>lore epsum</p>
+            <h2 class="stage__title">If the appointment date changed.</h2>
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step6">
+                        <label for="step6" value="step6" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Add the internal note with the screenshot showing the appointment change.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step6">
+                        <label for="step6" value="step6" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Change the appointment date ZD field.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step6">
+                        <label for="step6" value="step6" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Send the correct appointment details to the client with the 'Interview Scheduled / Drop off appointment scheduled/ Biometrics Appointment Scheduled' macro. 
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step6">
+                        <label for="step6" value="step6" class="steps__guide"> 
+                            <span class="highlight__ucc">
+                                Send the new appointment confirmation page with Doc handler, please use the <span class="bold">New appointment confirmation page</span> email template.
+                            </span>
+                        </label>
+                    </div>
+                </div>
         </div>
         <div id="stage7">
-            <h2>stage 3.</h2>
-            <p>lore epsum</p>
+            <h2 class="stage__title">If all appointments are <a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23237988457/Interview+Waiver" class="link" target="_blank">waived</a>.</h2>
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step7">
+                        <label for="step7" value="step7" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Post a screenshot from the Embassy account showing that the interview is waived.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step7">
+                        <label for="step7" value="step7" class="steps__guide"> 
+                            <span class="highlight__ucc">
+                                Change the UCC application status to <span class="bold">"Interview Waiver"</span>.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step7">
+                        <label for="step7" value="step7" class="steps__guide"> 
+                            <span class="red">
+                                Send the <span class="bold">"interview waiver"</span> Macro.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step7">
+                        <label for="step7" value="step7" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Mark ZD pending offset reason as "interview Waiver/Biometrics on-hold".
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step7">
+                        <label for="step7" value="step7" class="steps__guide"> 
+                            <span class="red">
+                                Send the documents from the UCC document handler (confirmation and instructions, <span class="bold">Courier in receipt</span>, MRV receipt, Ds160 form and Ds160 confirmation page).
+                            </span>
+                        </label>
+                    </div>
+                </div>
         </div>
         <div id="stage8">
-            <h2>stage 3.</h2>
-            <p>lore epsum</p>
+            <h2 class="stage__title">Appointment Reminder.</h2>
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step8">
+                        <label for="step8" value="step8" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Post a screenshot of the embassy account with the appointment still active, include an screenshot of <span class="bold">travel date, passport expiration date.</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step8">
+                        <label for="step8" value="step8" class="steps__guide"> 
+                            <span class="red">
+                                If anything needs changing, ask the client by sending <span class="bold">"we need to update the Ds160 form"</span> macro, call the client, and reprocess the form. Change the macro according to the situation.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step8">
+                        <label for="step8" value="step8" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Include the <span class="bold">screenshots</span> of the above-mentioned things in the In to show the travel date is after the appointment, the passport will not expire before the appointment of 6 months ater the trip, and the appointment date is still scheduled to the same date in the account.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step8">
+                        <label for="step8" value="step8" class="steps__guide"> 
+                            <span class="red">
+                                About 7 days before the appointment, send the <span class="bold">"Appointment Reminder"</span> macro.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step8">
+                        <label for="step8" value="step8" class="steps__guide"> 
+                            <span class="red">
+                                Re-send the necessary documents via document handler.
+                            </span>
+                        </label>
+                    </div>
+                </div>
         </div>
         <div id="stage9">
-            <h2>stage 3.</h2>
-            <p>lore epsum</p>
+            <h2 class="stage__title">After they attend the appointment/send the documents.</h2>
+            <br>
+            <div class="stage__steps">
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step4">
+                    <label for="step4" value="step4" class="steps__guide"> 
+                        <span>
+                            Check the status of their visa on CEAC* (see the actions below depending on the status).
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step4">
+                    <label for="step4" value="step4" class="steps__guide"> 
+                        <span>
+                            Check fhe Embassy account for any new updates from the embassy in the "details" section and scroll to the 'Follo-up Action History'.
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step4">
+                    <label for="step4" value="step4" class="steps__guide"> 
+                        <span class="red"> 
+                            Update the client on the status of their application.
+                        </span>
+                    </label>
+                </div>
+            </div>  
+            <hr>
+            
+            <h3 class="stage__subtitle">If the application is approved.</h3>
+            <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Post a screenshot of their visa status from CEAC (in the internal note)
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__ucc">
+                                Change the UCC application status to appoved*
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                Send a personalized message about the status and wait for the visa status to change to 'issued'.
+                            </span>
+                        </label>
+                    </div>
+                
+            </div>
+            <br><br>
+            <p>When visa is approved but not issued, you will see this in the status</p>
+            <br>
+            <img src="assets/visa approved.png" class="visa-approved__not-issued">
+            <br><br>
+            <p>You can also wait a bit for the status to change to Issued</p>
+            <hr>
+            <h3 class="stage__subtitle">If the visa is issued.</h3>
+            <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Post a screenshot of their visa status from CEAC (in the internal note)
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__ucc">
+                                Change the UCC application status to appoved*
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Post a screenshot from the Embassy account showing the passport delivery details or the lack of it at that moment.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                Send the final decision: <span class="bold">"USA visa Issued"</span> macro.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Checkmark ZD field Last Step Reached? and visa issued "yes" (if not selected automatically)
+                            </span>
+                        </label>
+                    </div>
+            </div>
+            <hr>
+        <h3 class="stage__subtitle">Refused under Administrative Processing</h3>
+        <div class="stage__steps">
+            <div class="stage__subcontainer">
+                <input type="checkbox" name="steps__guide" id="step4">
+                <label for="step4" value="step4" class="steps__guide"> 
+                    <span class="highlight__internal">
+                        Post a screenshot of their visa status from CEAC (in the internal note)
+                    </span>
+                </label>
+            </div>
+            <div class="stage__subcontainer">
+                <input type="checkbox" name="steps__guide" id="step4">
+                <label for="step4" value="step4" class="steps__guide"> 
+                    <span class="highlight__ucc">
+                        Change the UCC applicaiton status to <span class="bold">"Administrative processing"</span>.
+                    </span>
+                </label>
+            </div>
+            <div class="stage__subcontainer">
+                <input type="checkbox" name="steps__guide" id="step4">
+                <label for="step4" value="step4" class="steps__guide"> 
+                    <span class="highlight__internal">
+                        Include a screenshot from the embassy account showing the embassy account fist page as well as the "details" section under <span class="bold">"Follow-up Action History"</span> (embassy B).
+                    </span>
+                </label>
+            </div>
+            <div class="stage__subcontainer">
+                <input type="checkbox" name="steps__guide" id="step4">
+                <label for="step4" value="step4" class="steps__guide"> 
+                    <span>
+                        Ask the client if they received any 221(g) letters/papers or instructions form the embassy / consular officers asking them to take a follow-up action.
+                    </span>
+                </label>
+            </div>
+            <div class="stage__subcontainer">
+                <input type="checkbox" name="steps__guide" id="step4">
+                <label for="step4" value="step4" class="steps__guide"> 
+                    <span>
+                        Help the client follow the appropriate steps specified in the letter
+                    </span>
+                </label>
+            </div>
+            <br><br>
+            <p>If requested, you can send the additional requested documents by following the instructions from the Visa Navigator (V11 - REQUESTED DOCUMENTs - FULL NAME (this is the email subject)) or for old embassy A, you can use the 'provide feedback option' and select the appropriate subject and email format, and attach the documents (221(g)...)</p>
+            <br>
+            <div class="stage__subcontainer">
+                <input type="checkbox" name="steps__guide" id="step4">
+                <label for="step4" value="step4" class="steps__guide"> 
+                    <span class="highlight__zendesk">
+                        Mark ZD pending offset reason as ' Administrative Processing - On Hold '
+                    </span>
+                </label>
+            </div>
+            <div class="stage__subcontainer">
+                <input type="checkbox" name="steps__guide" id="step4">
+                <label for="step4" value="step4" class="steps__guide"> 
+                    <span>
+                        Keep checking the visa status until the final decision is made
+                    </span>
+                </label>
+            </div>
+            <br><br>
+            <p>In case you need it, here is the <a href="https://govassist.atlassian.net/wiki/spaces/DOC/pages/23237988854/Contacting+the+Embassy" target="_blank" class="link">Contacting Embassy guide</a>.</p>
+            <hr>
+        </div>
+        <h3 class="stage__subtitle">If the application is refused.</h3>
+            <div class="stage__steps">
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step4">
+                    <label for="step4" value="step4" class="steps__guide"> 
+                        <span class="highlight__internal">
+                            Post a screenshot of their visa status from CEAC (in the internal note)
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step4">
+                    <label for="step4" value="step4" class="steps__guide"> 
+                        <span class="highlight__ucc">
+                            Change the UCC application status to <span class="bold">"Visa Rejected"</span>.
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step4">
+                    <label for="step4" value="step4" class="steps__guide"> 
+                        <span class="red">
+                            Send the final decision: <span class="bold">"USA visa Refused"</span> macro.
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step4">
+                    <label for="step4" value="step4" class="steps__guide"> 
+                        <span class="highlight__zendesk">
+                            Select the ZD field Visa Issued <span class="bold">"No</span> (if not selected automatically).
+                        </span>
+                    </label>
+                </div>
+                <div class="stage__subcontainer">
+                    <input type="checkbox" name="steps__guide" id="step4">
+                    <label for="step4" value="step4" class="steps__guide"> 
+                        <span>
+                            <span class="bold">Solve the ticket.</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
         </div>
         <div id="stage10">
-            <h2>stage 3.</h2>
-            <p>lore epsum</p>
+            <h2 class="stage__title">Passport Delivery.</h2>
+                <div class="stage__steps">
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                Post a screenshot of their passport delivery status from the Embassy account and/or the provide link we receive regarding the delivery/passport tracking (internal note).
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                Inform the client
+                            </span>
+                        </label>
+                    </div>
+                    <br><br>
+                    <p>If you get the passport delivery details in before sending the "issued" macro, you can include them in that macro in the designated macro (read the macro).</p>
+                    <br>
+                    <p>If you get the notice after the issued macro, write a message informing the client about it.</p>
+                    <br>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__ucc">
+                                Change the UCC application status to <span class="bold">"passport in transit"</span> if it's in transit.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Select ZD offset reason field to <span class="bold">"Passport Delivery - On-hold"</span>
+                            </span>
+                        </label>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3 class="stage__subtitle">If the clients have to schedule a passport-pick up appointment.</h3>
+                    <br>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                Use the <span class="bold">"USA Visa: Please schedule your passport-pick up date"</span> macro.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__internal">
+                                After it is scheduled, add a screenshot of the scheduled appointment from the embassy account (internal note).
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                Use the <span class="bold">"USA VISA: Passport pick-up date scheduled"</span> macro.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__zendesk">
+                                Select ZD appointment date field to a new appointment date.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span>
+                                Send the appointment confirmation for passport pick up appointment via Document Handler.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span>
+                                Once they get their passport, and you have proof/confirmation post the screenshot of your proof from the embassy account or the website for passport tracking in the internal note (or have the client's confirmation).
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="red">
+                                Use the <span class="bold">"USA VISA: Passport received"</span> macro.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span class="highlight__ucc">
+                                Change the UCC status to <span class="bold">"Passport Received"</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="stage__subcontainer">
+                        <input type="checkbox" name="steps__guide" id="step4">
+                        <label for="step4" value="step4" class="steps__guide"> 
+                            <span>
+                                <span class="bold">Solve the ticket.</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
         </div>
     </div>
     
     <hr>
-    <button>
-        reset
+    <button class="reset" id="reset-button">
+        Reset.
     </button>
     <footer class="panel__footer">
         <div class="footer__container">
