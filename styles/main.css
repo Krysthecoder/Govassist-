@@ -44,13 +44,14 @@ header{
     width: 130px;
 }
 .highlight__internal{
-    background-color: yellow;
+    color: yellow;
 }
 .highlight__zendesk{
-    background-color: aqua;
+    color: aqua;
 }
 .highlight__ucc{
-    background-color: rgb(32, 230, 164);
+    color: rgb(32, 230, 164);
+
 }
 .highlight__other-actions{
     font-weight: bold;
